@@ -146,6 +146,11 @@ public class EditCourseUI extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
+        int row = parent.tblCourse.getSelectedRow();
+        nameField.setText((String) parent.tblCourse.getValueAt(row, 1));
+        feesField.setText((int) parent.tblCourse.getValueAt(row, 2)+"");
+        statusRadioBtn.setSelected((boolean) parent.tblCourse.getValueAt(row, 4));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
