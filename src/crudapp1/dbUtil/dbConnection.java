@@ -20,8 +20,8 @@ public class dbConnection {
     private PreparedStatement stmt= null;
     
     public void connect()throws ClassNotFoundException,SQLException{
-        Class.forName("com.mysql.jdbc.Driver");
-        conn=DriverManager.getConnection("jdbc:mysql://localhost/krijan", "root", "");
+        Class.forName("org.mariadb.jdbc.Driver");
+        conn=DriverManager.getConnection("jdbc:mariadb://localhost:3306/amar", "root", "123");
     }
     
     public PreparedStatement iniStatement(String sql)throws SQLException{
