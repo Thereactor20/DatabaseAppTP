@@ -21,7 +21,7 @@ public class dbConnection {
     
     public void connect()throws ClassNotFoundException,SQLException{
         Class.forName("org.mariadb.jdbc.Driver");
-        conn=DriverManager.getConnection("jdbc:mariadb://localhost:3306/amar", "root", "123");
+        conn=DriverManager.getConnection("jdbc:mariadb://localhost:3306/amar", "root", "amar123");
     }
     
     public PreparedStatement iniStatement(String sql)throws SQLException{
